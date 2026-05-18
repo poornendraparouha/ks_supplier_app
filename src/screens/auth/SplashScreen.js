@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import ScreenWrapper from '../common/ScreenWrapper';
+import ScreenWrapper from '../../components/common/ScreenWrapper';
 
 import colors from '../../theme/colors';
 import typography from '../../theme/typography';
@@ -11,7 +11,7 @@ const SplashScreen = () => {
     <ScreenWrapper>
       <View style={styles.container}>
         <Text style={styles.title}>
-          KS Supplier 
+          KS Supplier 11
         </Text>
       </View>
     </ScreenWrapper>

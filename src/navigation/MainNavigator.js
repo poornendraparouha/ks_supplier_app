@@ -2,15 +2,20 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 import AuthNavigator from './auth/AuthNavigator';
-// import AppNavigator from './app/AppNavigator';
+import AppNavigator from './app/AppNavigator';
+
+import useAuth from '../hooks/useAuth';
 
 const MainNavigator = () => {
+  const { isLoggedIn } = useAuth();
+
   return (
     <NavigationContainer>
-      <AuthNavigator />
-
-      {/* Later */}
-      {/* <AppNavigator /> */}
+      {isLoggedIn ? (
+        <AppNavigator />
+      ) : (
+        <AuthNavigator />
+      )}
     </NavigationContainer>
   );
 };
