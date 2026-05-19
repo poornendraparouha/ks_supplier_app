@@ -8,7 +8,7 @@ export const AuthContext =
 
 const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] =
-    useState(false);
+    useState(true);
 
   const login = () => {
     setIsLoggedIn(true);

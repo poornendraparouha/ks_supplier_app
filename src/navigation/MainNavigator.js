@@ -8,7 +8,7 @@ import useAuth from '../hooks/useAuth';
 
 const MainNavigator = () => {
   const { isLoggedIn } = useAuth();
-
+    console.log(isLoggedIn);
   return (
     <NavigationContainer>
       {isLoggedIn ? (

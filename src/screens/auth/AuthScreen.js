@@ -14,11 +14,11 @@ import AppButton from '../../components/common/AppButton';
 import colors from '../../theme/colors';
 import spacing from '../../theme/spacing';
 import typography from '../../theme/typography';
-import useAuth from '../../hooks/useAuth';
+// import useAuth from '../../hooks/useAuth';
 
 const AuthScreen = ({ navigation }) => {
   const [selectedTab, setSelectedTab] = useState('login');
-  const { login } = useAuth();
+//   const { login } = useAuth();
 
   return (
     <ScreenWrapper>
@@ -114,9 +114,11 @@ const AuthScreen = ({ navigation }) => {
                 ? 'Login'
                 : 'Register'
             }
-            onPress={() => {
-                login();
-            }}
+            onPress={() =>
+                navigation.navigate(
+                'OTPVerification',
+                )
+            }
             />
         </View>
       </ScrollView>
